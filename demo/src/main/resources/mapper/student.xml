@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.example.demo.repository.StudentMapper">
+    <insert id="addStudent">
+        insert into student_tb
+        values
+            (default, #{name}, #{grade}, #{studentClass})
+    </insert>
+    <update id="updateStudent">
+        update student_tb
+        set name = #{name},
+            grade = #{grade},
+            student_class = #{studentClass}
+        where id = #{id}
+    </update>
+    <delete id="deleteStudent">
+        delete
+        from
+            student_tb
+        where
+            id = #{id}
+    </delete>
+    <select id="findAll" resultType="com.example.demo.entity.Student">
+        select id, name, grade, student_class as studentClass
+        from student_tb
+    </select>
+</mapper>

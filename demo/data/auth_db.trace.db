@@ -1,0 +1,3 @@
+2024-10-24 21:55:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "STUDENT_TB" already exists; SQL statement:
+create table student_tb ( id Long NOT NULL PRIMARY KEY auto_increment, name varchar(255) not null, grade Long not null, student_class Long not null ) [42101-200]
